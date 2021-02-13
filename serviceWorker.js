@@ -10,8 +10,6 @@ var files = [
   'https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700', //caching 3rd party content
   './css/styles.css',
   './images/icons/android-chrome-192x192.png',
-  './images/push-on.png',
-  './images/push-off.png',
   './images/icons/favicon-16x16.png',
   './images/icons/favicon-32x32.png',
   './js/main.js',
