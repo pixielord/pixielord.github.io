@@ -55,16 +55,9 @@ h3{
 	margin: 4rem auto;
 }
 
-.wrapper .logo p{
-	margin: 0;
-	display: inline-block;
-	vertical-align: middle;
+.wrapper .logo img{
 	width: 9.4rem;
 	margin-top: 10px;
-}
-
-.wrapper .logo img{
-	width: 100%;
 }
 
 .verse{
