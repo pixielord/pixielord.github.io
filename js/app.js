@@ -1,8 +1,13 @@
 (function () {
+  var worker = 'sw.js';
   var page = window.location.pathname;
-  console.log(page);
+  page = page.replace("/prayer-book/templates/","");
+  if( page == 'prayers/' || page == 'holymass/'){
+    worker = '../../sw.js';
+  }
+
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register(worker)
     .then(function(registration) {
       console.log('Registration successful, scope is:', registration.scope);
     })
@@ -14,7 +19,7 @@
  	if ("serviceWorker" in navigator) {
   		window.addEventListener("load", function() {
     	navigator.serviceWorker
-      		.register("sw.js")
+      		.register(worker)
       		.then(res => console.log("service worker registered"))
       		.catch(err => console.log("service worker not registered", err))
   		})
