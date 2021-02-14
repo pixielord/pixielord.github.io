@@ -9,24 +9,24 @@
 	"theme_color": "#29434d",
 	"icons": [
 		{
-			"src": "./images/icons/jesus-64.png",
+			"src": "./images/jesus-64.png",
 			"type": "image/png",
 			"sizes": "64x64"
 		},
 		{
-			"src": "./images/icons/jesus-128.png",
+			"src": "./images/jesus-128.png",
 			"type": "image/png",
 			"sizes": "128x128"
 		},
 		{
-            "src": "./images/icons/jesus-256.png",
+            "src": "./images/jesus-256.png",
             "type": "image/png",
-			"sizes": "256x256",
+			"sizes": "256x256"
         },
         {
-            "src": "./images/icons/jesus.png",
+            "src": "./images/jesus.png",
             "type": "image/png",
-            "sizes": "512x512",
+            "sizes": "512x512"
         }
 	],
 	"author": {

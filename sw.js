@@ -1,41 +1,42 @@
-// Use a cacheName for cache versioning
-var cacheName = 'v1:static';
+const pb_cache = "pb-site-v1"
+const assets = [
+    "./index.html",
+    "https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700",
+    "./fonts/Gayathri-Regular.woff2",
+    "./fonts/Gayathri-Regular.otf",
+    "./fonts/Gayathri-Regular.ttf",
+    "./css/styles.css",
+    "./js/app.js",
+    "./images/android-chrome-192x192.png",
+    "./images/android-chrome-512x512.png",
+    "./images/android-maskable-192x192.png",
+    "./images/android-maskable-512x512.png",
+    "./images/apple-touch-icon.png",
+    "./images/favicon-16x16.png",
+    "./images/favicon-32x32.png",
+    "./images/favicon.ico",
+    "./images/jesus-128.png",
+    "./images/jesus-256.png",
+    "./images/jesus-64.png",
+    "./images/jesus.png",
+    "./images/logo.png",
+    "./images/menu-cover.jpg",
+    "./images/mstile-150x150.png",
+]
 
-// During the installation phase, you'll usually want to cache static assets.
-self.addEventListener('install', function(e) {
-    // Once the service worker is installed, go ahead and fetch the resources to make this work offline.
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            return cache.addAll([
-                './',
-                './css/style.css',
-                './js/app.js',
-                './fonts/Gayathri-Regular.otf',
-                './fonts/Gayathri-Regular.ttf',
-                './fonts/Gayathri-Regular.woff2',
-                './images/icons/jesus-128.png',
-				'./images/icons/menu-cover.jpg',
-				'./images/push-on.png',
-				'./images/push-off.png',
-                './manifest.json'
-            ]).then(function() {
-                self.skipWaiting();
-            });
-        })
-    );
+self.addEventListener("install", installEvent => {
+    console.log('installing');
+  installEvent.waitUntil(
+    caches.open(pb_cache).then(cache => {
+      cache.addAll(assets)
+    })
+  )
 });
 
-// when the browser fetches a URL…
-self.addEventListener('fetch', function(event) {
-    // … either respond with the cached object or go ahead and fetch the actual URL
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
-            if (response) {
-                // retrieve from cache
-                return response;
-            }
-            // fetch as normal
-            return fetch(event.request);
-        })
-    );
+self.addEventListener("fetch", fetchEvent => {
+  fetchEvent.respondWith(
+    caches.match(fetchEvent.request).then(res => {
+      return res || fetch(fetchEvent.request)
+    })
+  )
 });
