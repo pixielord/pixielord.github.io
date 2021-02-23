@@ -7,6 +7,14 @@ body{
 	display: table;
 	width: 100%;
 	margin: 0 auto;
+	height: 100%;
+}
+
+@font-face {
+	font-family: 'roboto-medium';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../fonts/Roboto-Medium.ttf) format('truetype');
 }
 
 @font-face {
@@ -24,12 +32,12 @@ body.malayalam{
 }
 
 body.english{
-	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'roboto-medium';
 }
 
 .section p.english{
-	font-size: 1rem;
-	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.43rem;
+	font-family: 'roboto-medium';
 }
 
 .malayalam .title{
@@ -53,7 +61,8 @@ body.english{
 }
 
 .main-content{
-	margin: 0.5rem auto 0rem;
+	margin: 0.5rem auto 0.7rem auto;
+	padding: 0px 30px 0px 30px;
 }
 
 .section{
@@ -83,8 +92,8 @@ body.english{
 }
 
 p.english{
-	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1.06rem;
+	font-family: 'roboto-medium';
+	font-size: 0.43rem;
 }
 
 .prayer-cover img{
@@ -103,4 +112,9 @@ p.english{
 
 .prayer-cover .logo{
 	margin: 0.5rem auto;
+}
+
+.cover .page-content{
+	display: table-cell;
+	vertical-align: middle;
 }

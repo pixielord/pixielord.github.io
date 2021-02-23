@@ -1,4 +1,4 @@
-const pb_cache = "pbc_v2"
+const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
     "./index.html",

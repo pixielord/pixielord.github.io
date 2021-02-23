@@ -441,7 +441,7 @@ h4 {
 	display: inline-block;
 	border: 1px solid #f7f7f7;
 	height: 100%;
-	padding: 12px 20px 5px 20px;
+	/*padding: 12px 20px 5px 20px;*/
 	box-sizing: border-box;
 }
 
@@ -452,16 +452,15 @@ h4 {
 	border: none;
 }
 
-.page-content .prayer-content .pagination,
-.page-content .holymass-content .pagination{
-	height: 50px;
-    /*border: 1px solid red;*/
-    padding: 9px 0px;
+.page-content .pagination,
+.page-content .pagination{
+	height: 44px;
+	padding: 0px;
     box-sizing: border-box;
 }
 
-.page-content .prayer-content .pagination a,
-.page-content .holymass-content .pagination a{
+.page-content .pagination a,
+.page-content .pagination a{
 	line-height: 30px;
     padding: 0px 0px;
     display: inline-block;
@@ -469,8 +468,8 @@ h4 {
     text-decoration: none;
 }
 
-.page-content .prayer-content .pagination a.nav-links,
-.page-content .holymass-content .pagination a.nav-links{
+.page-content .pagination a.nav-links,
+.page-content .pagination a.nav-links{
 	background-color: #b93737;
 	color: #fff;
 }
@@ -501,7 +500,19 @@ ul.menu-list li a {
     color: #b93737;
     padding: 15px 0px;
     font-family: 'roboto-medium';
-    font-size: 0.38rem;
+    font-size: 0.35rem;
+}
+
+#footer{
+	position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: #b93737;
+    padding: 15px 0px;
+    font-family: 'roboto-medium';
+    font-size: 0.35rem;
 }
 
 .page-content.offline h2{
