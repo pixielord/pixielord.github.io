@@ -36,8 +36,22 @@ h3 {
 
 /* MAIN styles */
 
+@font-face {
+	font-family: 'roboto-regular';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'roboto-medium';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../fonts/Roboto-Medium.ttf) format('truetype');
+}
+
 body {
-	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'roboto-regular';
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -476,4 +490,25 @@ ul.menu-list li a {
    text-decoration: none;
    font-size: 0.4rem;
    vertical-align: middle;
+}
+
+#footer{
+	position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: #b93737;
+    padding: 15px 0px;
+    font-family: 'roboto-medium';
+    font-size: 0.38rem;
+}
+
+.page-content.offline h2{
+	font-size: 9rem;
+}
+
+.page-content.offline p{
+	font-size: 0.4rem;
+	margin: 0 0.5rem;
 }

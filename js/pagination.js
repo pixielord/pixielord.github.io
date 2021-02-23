@@ -5,7 +5,6 @@
 	var FRAME = document.getElementById('content_frame');
 	var limit_start = 1;
 	var limit_end = get_limit_end();
-	console.log(limit_end);
 
 	NEXT.addEventListener("click", function() {
  		navigate_page("next");
@@ -104,5 +103,4 @@
 	  	elm.classList.remove('disabled-nav');
 		}
 	}
-
 })();

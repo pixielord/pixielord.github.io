@@ -1,6 +1,13 @@
-const pb_cache = "pb-site-v1"
+const pb_cache = "pbc_v1"
 const assets = [
+    "./manifest.json",
     "./index.html",
+    "./offline.html",
+    "./prayers.html",
+    "./way-of-cross.html",
+    "./holymass.html",
+    "./family-prayers.html",
+    "./transliteration.html",
     "./templates/holymass/transliteration/page1.html",
     "./templates/holymass/transliteration/page2.html",
     "./templates/holymass/transliteration/page3.html",
@@ -111,8 +118,6 @@ const assets = [
     "./android-icon-48x48.png",
     "./android-icon-72x72.png",
     "./android-icon-96x96.png",
-    "./android-icon-48x48.png",
-    "./apple-icon-114x114.png",
     "./apple-icon-120x120.png",
     "./apple-icon-144x144.png",
     "./apple-icon-114x114.png",
@@ -137,22 +142,44 @@ const assets = [
     "./images/jesus.png",
     "./images/logo.png",
     "./images/menu-cover.jpg",
+    "./images/marthoma-cross.jpg",
     "./images/way-of-the-cross.png"
 ]
 
 self.addEventListener("install", installEvent => {
-    console.log('installing');
+	console.log('install called');
   installEvent.waitUntil(
-    // caches.open(pb_cache).then(cache => {
-    //   cache.addAll(assets)
-    // })
-  )
+    caches.open(pb_cache)
+    .then((cache) => {
+      //[] of files to cache & if any of the file not present `addAll` will fail
+      return cache.addAll(assets)
+      .then(() => {
+        console.info('All files are cached');
+        return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
+      })
+      .catch((error) =>  {
+        console.error('Failed to cache', error);
+      })
+    })
+  );
 });
 
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request)
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    // Try the cache
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request).then(function(response) {
+        if (response.status === 404) {
+          return caches.match('/offline.html');
+        }
+        return response
+      });
+    }).catch(function() {
+      // If both fail, show a generic fallback:
+      return caches.match('/offline.html');
     })
-  )
+  );
 });
