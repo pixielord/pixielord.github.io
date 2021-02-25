@@ -1,3 +1,4 @@
+// VERSION: 3
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -147,18 +148,15 @@ const assets = [
 ]
 
 self.addEventListener("install", installEvent => {
-	console.log('install called');
+  const cacheBypassRequests = assets.map(
+    (url) => new Request(url, {cache: 'reload'}));
+
   installEvent.waitUntil(
     caches.open(pb_cache)
     .then((cache) => {
-      //[] of files to cache & if any of the file not present `addAll` will fail
-      return cache.addAll(assets)
+      return cache.addAll(cacheBypassRequests)
       .then(() => {
-        console.info('All files are cached');
-        return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
-      })
-      .catch((error) =>  {
-        console.error('Failed to cache', error);
+        return self.skipWaiting();
       })
     })
   );

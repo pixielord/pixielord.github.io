@@ -32,7 +32,7 @@
 	});
 
 	function get_limit_end(){
-		checkpoint = is_transliteration() ? 36 : false;
+		checkpoint = is_transliteration() ? 39 : false;
 		checkpoint = !checkpoint && is_way_of_cross() ? 34 : checkpoint;
 		return checkpoint ? checkpoint : 21;
 	}

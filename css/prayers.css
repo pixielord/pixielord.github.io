@@ -61,8 +61,11 @@ body.english{
 }
 
 .main-content{
-	margin: 0.5rem auto 0.7rem auto;
-	padding: 0px 30px 0px 30px;
+	margin: 20px 31px 35px 30px;
+    border: 1px solid #9c9b9b;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .section{
