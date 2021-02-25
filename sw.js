@@ -1,4 +1,4 @@
-// VERSION: 4
+// VERSION: 5
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -116,6 +116,7 @@ const assets = [
     "./js/app.js",
     "./js/menu.js",
     "./js/pagination.js",
+    "./js/client.js",
     "./android-icon-144x144.png",
     "./android-icon-192x192.png",
     "./android-icon-36x36.png",

@@ -21,7 +21,6 @@
 
 	function DetectAndServe(){
 	    let os = getMobileOperatingSystem();
-	    console.log(os);
 	    var menu = document.querySelector("#mal_eng");
 	    if (os == "Android") {
 	        menu.href = "https://play.google.com/store/apps/details?id=org.syromalabar.stthomas"; 
