@@ -1,4 +1,4 @@
-// VERSION: 3
+// VERSION: 4
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -45,6 +45,9 @@ const assets = [
     "./templates/holymass/transliteration/page34.html",
     "./templates/holymass/transliteration/page35.html",
     "./templates/holymass/transliteration/page36.html",
+    "./templates/holymass/transliteration/page37.html",
+    "./templates/holymass/transliteration/page38.html",
+    "./templates/holymass/transliteration/page39.html",
     "./templates/prayers/page1.html",
     "./templates/prayers/page2.html",
     "./templates/prayers/page3.html",
