@@ -1,4 +1,4 @@
-// VERSION: 5
+// VERSION: 7
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -148,7 +148,7 @@ const assets = [
     "./images/logo.png",
     "./images/menu-cover.jpg",
     "./images/marthoma-cross.jpg",
-    "./images/way-of-the-cross.png"
+    "./images/way-of-the-cross.png",
 ]
 
 self.addEventListener("install", installEvent => {
