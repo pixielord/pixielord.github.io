@@ -53,6 +53,7 @@ body.cover .page-content{
 	display: table-cell;
 	vertical-align: middle;
 	font-family: 'roboto-regular';
+	border: none;
 }
 
 .holymass-cover .logo{
