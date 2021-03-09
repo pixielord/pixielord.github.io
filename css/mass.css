@@ -196,7 +196,20 @@ p.description{
 	font-size: 0.38rem;
     font-family: 'roboto-medium';
     font-style: italic;
-     font-weight: normal; 
+    font-weight: normal; 
     color: #8c2121;
     margin: 12px auto;
+}
+
+.page-content .highlight{
+	color: #ff471a !important;
+}
+
+.page-content .right-align{
+	text-align: right;
+}
+
+.page-content .all{
+	font-family: 'roboto-bold' !important;
+	font-weight: bold;
 }

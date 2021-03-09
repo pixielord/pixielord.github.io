@@ -104,6 +104,11 @@ p.english{
 	display: block;
 	margin: 0 auto;
 }
+
+.prayer-cover.english-title img{
+	width: 55%;
+}
+
 .prayer-title{
 	font-size: 1rem;
 	text-align: center;
@@ -113,6 +118,10 @@ p.english{
 	font-family: 'gayathri-regular';
 }
 
+.prayer-cover.english-title .prayer-title{
+	font-family: 'roboto-medium';
+}
+
 .prayer-cover .logo{
 	margin: 0.5rem auto;
 }
@@ -120,4 +129,10 @@ p.english{
 .cover .page-content{
 	display: table-cell;
 	vertical-align: middle;
+}
+
+#jumpto{
+	text-decoration: underline;
+	color: #0000EE;
+	cursor: pointer;
 }
