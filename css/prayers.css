@@ -31,8 +31,9 @@ body.malayalam{
 	font-family: 'gayathri-regular';
 }
 
-body.english{
+.english-content p{
 	font-family: 'roboto-medium';
+	font-size: 0.43rem;
 }
 
 .section p.english{
@@ -60,10 +61,17 @@ body.english{
 	margin: 5px auto 0px auto;
 }
 
-.main-content{
-	margin: 20px 31px 35px 30px;
+.main-wrapper{
+	margin: 15px 15px 8px 15px;
     border: 1px solid #9c9b9b;
-    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0px 20px;
+}
+
+.main-content{
+	margin: 0 auto;
+    padding-top: 10px;
     box-sizing: border-box;
     border-radius: 8px;
 }
@@ -76,10 +84,6 @@ body.english{
 	font-size: 0.45rem;
 	text-align: left;
 	margin: 5px auto;
-}
-
-.paragraph{
-	/*margin-left: 10%;*/
 }
 
 .right-align{
@@ -122,11 +126,15 @@ p.english{
 	font-family: 'roboto-medium';
 }
 
-.prayer-cover .logo{
-	margin: 0.5rem auto;
+.cover.page-content{
+	display: table;
+	height: 100vh;
+	margin-bottom: 36px;
+	margin-left: auto;
+    margin-right: auto;
 }
 
-.cover .page-content{
+.cover.page-content .prayer-cover{
 	display: table-cell;
 	vertical-align: middle;
 }

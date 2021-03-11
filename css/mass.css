@@ -42,18 +42,30 @@ body.cover{
 }
 
 body .page-content{
-	margin: 20px 31px 35px 30px;
-    border: 1px solid #9c9b9b;
-    padding: 20px;
+    padding: 8px 0px;
     box-sizing: border-box;
     border-radius: 8px;
 }
 
-body.cover .page-content{
-	display: table-cell;
-	vertical-align: middle;
+.cover.page-content{
+	display: table;
 	font-family: 'roboto-regular';
 	border: none;
+	height: 100vh;
+	margin-bottom: 36px;
+}
+
+.cover.page-content .holymass-cover{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.main-wrapper{
+	margin: 15px 15px 8px 15px;
+    border: 1px solid #9c9b9b;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0px 20px;
 }
 
 .holymass-cover .logo{
@@ -212,4 +224,8 @@ p.description{
 .page-content .all{
 	font-family: 'roboto-bold' !important;
 	font-weight: bold;
+}
+
+.full-height{
+	height: 100vh;
 }
