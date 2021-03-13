@@ -184,7 +184,8 @@ header {
 	border-radius: 0;
 }
 
-.menu-list li a {
+.menu-list li a,
+.menu-list li p {
 	padding: 20px;
 	color: rgba(0, 0, 0, 0.87);
 	cursor: pointer;
@@ -485,7 +486,8 @@ h4 {
 	 margin: 50px auto;
 }
 
-ul.menu-list li a {
+ul.menu-list li a,
+ul.menu-list li p {
    text-decoration: none;
    font-size: 0.4rem;
    vertical-align: middle;
