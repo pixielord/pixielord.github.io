@@ -1,4 +1,4 @@
-// VERSION: 25
+// VERSION: 26
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",

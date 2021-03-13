@@ -184,6 +184,10 @@ header {
 	border-radius: 0;
 }
 
+#share{
+	color: #b93737;
+}
+
 .menu-list li a,
 .menu-list li p {
 	padding: 20px;

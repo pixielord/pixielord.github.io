@@ -60,8 +60,6 @@
     if (navigator.share) {
       navigator.share({
         url: "https://stalphonsaleicester.uk/",
-        title: "Prayer Book - St. Alphonsa Leicester UK",
-        Text: "Progressive prayer book app developed by St. Alphonsa Leicester UK"
       }).then(() => console.log('Successful share'))
       .catch(error => console.log('Error sharing:', error));
       }
