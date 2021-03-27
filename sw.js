@@ -1,4 +1,4 @@
-// VERSION: 28
+// VERSION: 29
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -11,11 +11,14 @@ const assets = [
     "./transliteration.html",
     "./children-mass.html",
     "./st-alphonsa-novena.html",
+    "./holyweek.html",
+    "./palm-sunday.html",
     "./templates/childrens-mass.html",
     "./templates/family-prayers.html",
     "./templates/holymass-transliteration.html",
     "./templates/st-alphonsa-novena.html",
     "./templates/way-of-cross.html",
+    "./templates/palm-sunday.html",
     "./fonts/Gayathri-Regular.woff2",
     "./fonts/Gayathri-Regular.otf",
     "./fonts/Gayathri-Regular.ttf",
@@ -64,6 +67,7 @@ const assets = [
     "./images/menu-cover.jpg",
     "./images/marthoma-cross.jpg",
     "./images/way-of-the-cross.png",
+    "./images/hosanna.jpg",
 ]
 
 self.addEventListener("install", installEvent => {
