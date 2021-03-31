@@ -112,6 +112,14 @@ p.english{
 	margin: 0 auto;
 }
 
+body.holy-week .prayer-cover img{
+	width: 100%;
+}
+
+body.holy-week .prayer-cover .logo{
+	width: 100%;
+}
+
 .prayer-cover.english-title img{
 	width: 55%;
 }
