@@ -1,4 +1,4 @@
-// VERSION: 34
+// VERSION: 35
 const pb_cache = "pbc_v1"
 const assets = [
     "./manifest.json",
@@ -15,6 +15,7 @@ const assets = [
     "./palm-sunday.html",
     "./maundy-thursday.html",
     "./good-friday.html",
+    "./holy-saturday.html",
     "./templates/childrens-mass.html",
     "./templates/family-prayers.html",
     "./templates/holymass-transliteration.html",
@@ -23,6 +24,7 @@ const assets = [
     "./templates/palm-sunday.html",
     "./templates/maundy-thursday.html",
     "./templates/good-friday.html",
+    "./templates/holy-saturday.html",
     "./fonts/Gayathri-Regular.woff2",
     "./fonts/Gayathri-Regular.otf",
     "./fonts/Gayathri-Regular.ttf",
@@ -74,6 +76,7 @@ const assets = [
     "./images/hosanna.jpg",
     "./images/last-supper.jpeg",
     "./images/good-friday.jpg",
+    "./images/holy-saturday.jpg",
 ]
 
 self.addEventListener("install", installEvent => {
